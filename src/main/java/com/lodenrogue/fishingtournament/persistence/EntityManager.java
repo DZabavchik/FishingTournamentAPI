@@ -1,11 +1,11 @@
 package com.lodenrogue.fishingtournament.persistence;
 
-import java.util.List;
-import java.util.Map;
-
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+
+import java.util.List;
+import java.util.Map;
 
 public class EntityManager<T> {
 	private Class<T> entityClass;
@@ -86,8 +86,11 @@ public class EntityManager<T> {
 
 	private Query buildQuery(Session session, String query, Map<String, Object> parameters) {
 		Query targetQuery = session.createQuery(query);
-		for (String key : parameters.keySet()) {
-			targetQuery.setParameter(key, parameters.get(key));
+		if (parameters != null)
+		{
+			for (String key : parameters.keySet()) {
+				targetQuery.setParameter(key, parameters.get(key));
+			}
 		}
 		return targetQuery;
 	}
