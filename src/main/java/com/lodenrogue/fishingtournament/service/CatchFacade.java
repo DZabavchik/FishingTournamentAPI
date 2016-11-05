@@ -13,7 +13,7 @@ public class CatchFacade extends AbstractFacade<Catch> {
 	}
 
 	public List<Catch> findUnreviewed() {
-		return findAllFromQuery("FROM Catch WHERE review_date IS NULL", null);
+		return findAllFromQuery("FROM Catch WHERE review_date IS NULL");
 	}
 
 	public List<Catch> findByUser(long userId) {

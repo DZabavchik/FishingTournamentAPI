@@ -1,9 +1,9 @@
 package com.lodenrogue.fishingtournament.service;
 
+import com.lodenrogue.fishingtournament.persistence.EntityManager;
+
 import java.util.List;
 import java.util.Map;
-
-import com.lodenrogue.fishingtournament.persistence.EntityManager;
 
 public class AbstractFacade<T> {
 	private EntityManager<T> entityManager;
@@ -38,6 +38,10 @@ public class AbstractFacade<T> {
 
 	protected List<T> findAllFromQuery(String query, Map<String, Object> parameters) {
 		return entityManager.findAllFromQuery(query, parameters);
+	}
+
+	protected List<T> findAllFromQuery(String query) {
+		return entityManager.findAllFromQuery(query, null);
 	}
 
 }
