@@ -2,6 +2,7 @@ package com.lodenrogue.fishingtournament.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.lodenrogue.fishingtournament.model.User;
 import com.lodenrogue.fishingtournament.service.UserFacade;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/api/v1")
 public class UserController {
