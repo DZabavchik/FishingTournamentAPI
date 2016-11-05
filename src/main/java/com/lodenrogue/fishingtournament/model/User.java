@@ -24,6 +24,8 @@ public class User {
 
 	private int score;
 
+	private int age;
+
 	public long getId() {
 		return id;
 	}
@@ -62,5 +64,13 @@ public class User {
 
 	public void setScore(int score) {
 		this.score = score;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
 	}
 }
