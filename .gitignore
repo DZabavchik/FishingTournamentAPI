@@ -3,6 +3,7 @@
 
 .project
 
+.idea
 
 .settings/*
 
@@ -11,3 +12,5 @@
 src/main/resources/hibernate.cfg.xml
 
 target/*
+
+*.iml

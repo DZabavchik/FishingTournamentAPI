@@ -22,7 +22,7 @@ public class User {
 	@Column(name = "last_name")
 	private String lastName;
 
-	private int score;
+	private String alias;
 
 	private int age;
 
@@ -58,19 +58,19 @@ public class User {
 		this.lastName = lastName;
 	}
 
-	public int getScore() {
-		return score;
-	}
-
-	public void setScore(int score) {
-		this.score = score;
-	}
-
 	public int getAge() {
 		return age;
 	}
 
 	public void setAge(int age) {
 		this.age = age;
+	}
+
+	public String getAlias() {
+		return alias;
+	}
+
+	public void setAlias(String alias) {
+		this.alias = alias;
 	}
 }
