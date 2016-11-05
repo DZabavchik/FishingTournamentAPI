@@ -1,12 +1,7 @@
 package com.lodenrogue.fishingtournament.model;
 
+import javax.persistence.*;
 import java.util.Calendar;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
 @Table(name = "catches")
@@ -24,6 +19,12 @@ public class Catch {
 
 	private Calendar date;
 	private String location;
+
+	@Column(name = "reviewer_fish_id")
+	private long reviewerFishId;
+
+	@Column(name = "review_date")
+	private Calendar reviewDate;
 
 	public long getId() {
 		return id;
@@ -64,4 +65,21 @@ public class Catch {
 	public void setUserId(long userId) {
 		this.userId = userId;
 	}
+
+	public long getReviewerFishId() {
+		return reviewerFishId;
+	}
+
+	public void setReviewerFishId(long reviewerFishId) {
+		this.reviewerFishId = reviewerFishId;
+	}
+
+	public Calendar getReviewDate() {
+		return reviewDate;
+	}
+
+	public void setReviewDate(Calendar reviewDate) {
+		this.reviewDate = reviewDate;
+	}
+
 }
